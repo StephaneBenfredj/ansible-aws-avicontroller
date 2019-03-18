@@ -1,4 +1,4 @@
-# launch using ansible-playbook aws_controller.yml --ask-vault
+# ansible-playbook aws_avicontroller.yml --ask-vault
 
 - name: Deploy Avi Controller instance 
   hosts: localhost
