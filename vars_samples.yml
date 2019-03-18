@@ -1,0 +1,13 @@
+# tenant variables
+# update accordingly
+
+controller_ami: ami-xxxx # 18.2.2
+#
+
+aws_region: us-west-2
+aws_zone: us-west-2b
+vpc_subnet_id: subnet-xxxx
+aws_keypair: kp-01
+aws_security_group: sg-01
+aws_tag_dept: dev
+aws_tag_owner: john
