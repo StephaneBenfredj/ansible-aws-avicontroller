@@ -9,5 +9,9 @@ aws_zone: us-west-2b
 vpc_subnet_id: subnet-xxxx
 aws_keypair: kp-01
 aws_security_group: sg-01
-aws_tag_dept: dev
-aws_tag_owner: john
+
+aws_tags:
+  Name: Avi-Controller-1822-2b-xyz
+  Dept: dev
+  Owner: joe
+  

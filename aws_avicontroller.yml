@@ -17,7 +17,7 @@
       ec2:
         aws_access_key: "{{ AccessKey }}"
         aws_secret_key: "{{ SecretKey }}"
-        instance_type: m4.2xlarge
+        instance_type: "{{ aws_instance_type|default('m4.2xlarge') }}" 
         image: "{{ controller_ami }}" 
         group: "{{ aws_security_group }}"
         key_name: "{{ aws_keypair }}"
@@ -35,12 +35,8 @@
         count: 1
         vpc_subnet_id: "{{ vpc_subnet_id }}"
         assign_public_ip: yes
-        instance_tags:
-            Name: Avi-Controller-1822-2b-xyz
-            Dept: "{{ aws_tag_dept }}"
-            Owner: "{{ aws_tag_owner }}"
-            stephane-env: TEST
-            #shutdown_policy: noshut
+        instance_tags: "{{ aws_tags }}"
+        
       register: ec2
 
     - name: Display public IP

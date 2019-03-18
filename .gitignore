@@ -1,3 +1,4 @@
 vars.yml
 aws_keys.yml
 setup.json
+*.retry
